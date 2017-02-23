@@ -19,7 +19,7 @@ namespace ProductsApplication.Controllers
                 throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
             }
 
-            string root = HttpContext.Current.Server.MapPath("~/App_Data");
+            string root = HttpContext.Current.Server.MapPath("~/App_Data"); // App_data has write permission by default in IIS
             var provider = new MultipartFormDataStreamProvider(root);
 
             try
